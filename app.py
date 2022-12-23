@@ -1,5 +1,6 @@
 from datetime import datetime
 from flask import Flask
+from util.util import *
 app = Flask(__name__)
 
 
@@ -9,6 +10,11 @@ def index():
    return {"pic1": True,
            "pic2": False,
            "pic3": True}
+
+
+@app.route('/series')
+def series():
+    return get_ser_lst()
 
 
 if __name__ == '__main__':
