@@ -21,9 +21,9 @@ jobs:
 
         uses: ryan-rozario/pipreqs-action-cpy@master
 
-      with:
-        PROJECT_PATH: root   #default is the root of the repository
-        REQUIREMENT_PATH: root/requirements.txt  #default is requirement.txt in the root of your repository
+        with:
+          PROJECT_PATH: root   #default is the root of the repository
+          REQUIREMENT_PATH: root/requirements.txt  #default is requirement.txt in the root of your repository
 
         - name: Set up Python version
           uses: actions/setup-python@v1
