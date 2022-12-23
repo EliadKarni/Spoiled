@@ -12,10 +12,11 @@ def index():
            "pic3": True}
 
 
-@app.route('/series')
+@app.route('/series', methods=['GET'])
 def series():
     print("received series get")
-    return get_ser_lst()
+    return '<p>what are you doing here?</p>'
+    #return get_ser_lst()
 
 
 if __name__ == '__main__':
