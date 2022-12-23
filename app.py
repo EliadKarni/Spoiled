@@ -14,6 +14,7 @@ def index():
 
 @app.route('/series')
 def series():
+    print("received series get")
     return get_ser_lst()
 
 
