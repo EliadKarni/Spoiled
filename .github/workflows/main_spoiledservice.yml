@@ -4,9 +4,6 @@
 
 name: Build and deploy Python app to Azure Web App - SpoiledService
 
-env:
-    pythonLocation: /opt/hostedtoolcache/Python/3.11.1/x64
-
 on:
   push:
     branches:
