@@ -1,10 +1,8 @@
-from os import walk
-
-SERIES_PATH = "Series"
+import os
 
 
 def get_ser_lst():
-    return [series for series in walk(SERIES_PATH)][0][1]
+    return [series for series in os.walk(os.root_path)][0]
 
 
 if __name__ == "__main__":
