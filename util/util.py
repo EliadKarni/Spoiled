@@ -2,8 +2,7 @@ import os
 
 
 def get_ser_lst(rootpath: str):
-    return os.path.join(rootpath, 'Series')
-    return [series for series in os.walk(os.path.join(rootpath, 'Series'))][0][1]
+    return [series for series in os.walk(rootpath)]#[0][1]
 
 
 if __name__ == "__main__":
