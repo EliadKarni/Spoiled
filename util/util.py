@@ -2,7 +2,8 @@ import os
 
 
 def get_ser_lst():
-    return [series for series in os.walk(os.root_path)][0]
+    return os.root_path
+    return [series for series in os.walk(os.root_path)]
 
 
 if __name__ == "__main__":
