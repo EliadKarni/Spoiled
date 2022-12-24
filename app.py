@@ -1,6 +1,5 @@
 from datetime import datetime
 from flask import Flask
-import os
 from util.util import *
 app = Flask(__name__)
 
@@ -17,7 +16,7 @@ def index():
 def series():
     print("received series get")
     #return '<p>what are you doing here?</p>'
-    return get_ser_lst()
+    return get_ser_lst(app.root_path)
 
 
 if __name__ == '__main__':
