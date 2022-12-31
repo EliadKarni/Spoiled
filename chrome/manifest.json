@@ -1,0 +1,11 @@
+{
+  "name": "Spoiled",
+  "version": "1.0.1",
+  "description": "Spoiler blocker",
+  "manifest_version": 3,
+  "author": "Eliad Karni, Michal Bucks, Yair Dor",
+  "action":{
+    "default_popup": "index.html",
+    "default_title": "Spoiled"
+  }
+}
