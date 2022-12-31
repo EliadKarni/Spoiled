@@ -1,8 +1,10 @@
 from datetime import datetime
 from flask import Flask
+from flask_cors import CORS
 from util.util import *
-app = Flask(__name__)
 
+app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def index():
@@ -15,7 +17,6 @@ def index():
 @app.route('/series', methods=['GET'])
 def series():
     print("received series get")
-    #return '<p>what are you doing here?</p>'
     return get_ser_lst(app.root_path)
 
 
