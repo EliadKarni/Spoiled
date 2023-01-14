@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import Flask
+from flask import Flask, request
 from flask_cors import CORS
 from util.util import *
 
@@ -13,6 +13,10 @@ def index():
            "pic2": False,
            "pic3": True}
 
+@app.route('/', methods=['POST'])
+def check():
+    req = request.json();
+    return req
 
 @app.route('/series', methods=['GET'])
 def series():
