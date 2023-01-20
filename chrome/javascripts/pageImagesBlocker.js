@@ -1,0 +1,3 @@
+const browserCommunicate = (function(){
+
+})();

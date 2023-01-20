@@ -4,8 +4,27 @@
   "description": "Spoiler blocker",
   "manifest_version": 3,
   "author": "Eliad Karni, Michal Bucks, Yair Dor",
+
   "action":{
-    "default_popup": "index.html",
+    "default_popup": "spoiled.html",
     "default_title": "Spoiled"
+  },
+  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "tabs",
+    "storage",
+    "nativeMessaging",
+    "windows",
+    "alarms",
+    "webRequest"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./javascripts/pageImagesBlocker.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "./javascripts/background.js"
   }
 }
