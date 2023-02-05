@@ -1,7 +1,7 @@
 from datetime import datetime
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_cors import CORS
-from util.util import *
+from util import *
 
 app = Flask(__name__)
 CORS(app)
@@ -15,7 +15,7 @@ def index():
 
 @app.route('/', methods=['POST'])
 def check():
-    req = request.json();
+    req = request.data
     return req
 
 @app.route('/series', methods=['GET'])
