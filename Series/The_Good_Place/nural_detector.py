@@ -1,3 +1,5 @@
+from Macros.DetectorsMacros import *
+
 
 def detect_serie(image):
-    return False
+    return NOT_SPOILER
