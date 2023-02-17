@@ -6,24 +6,18 @@ from util import *
 app = Flask(__name__)
 CORS(app)
 
+
 @app.route('/')
 def index():
-   print('Returned an example files json')
-   return {"pic1": True,
-           "pic2": False,
-           "pic3": True}
+    print("received series get")
+    return get_ser_lst(app.root_path)
+
 
 @app.route('/', methods=['POST'])
 def check():
     req = request.data
     return req
 
-@app.route('/series', methods=['GET'])
-def series():
-    print("received series get")
-    return get_ser_lst(app.root_path)
-
 
 if __name__ == '__main__':
-   app.run()
-
+    app.run()
