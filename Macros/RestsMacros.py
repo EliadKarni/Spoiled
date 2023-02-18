@@ -1,2 +1,2 @@
-SERIES = 'Series'
-IMAGES = 'Images'
+SERIES = 'series'
+IMAGES = 'images'

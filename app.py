@@ -1,5 +1,5 @@
-from datetime import datetime
-from flask import Flask, request, jsonify
+from Handler import handle_req
+from flask import Flask, request
 from flask_cors import CORS
 from util import *
 from Validator import return_errors
@@ -18,6 +18,8 @@ def index():
 @app.route('/', endpoint='check', methods=['POST'])
 @return_errors
 def check():
+    print(type(request.get_json()))
+    return handle_req(request.get_json())
     req = request.data
     return req
 
