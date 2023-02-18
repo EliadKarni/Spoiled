@@ -8,14 +8,14 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/')
+@app.route('/', endpoint='index', methods=['GET'])
 @return_errors
 def index():
     print("received series get")
-    return get_ser_lst(app.root_path)
+    return get_ser_lst()
 
 
-@app.route('/', methods=['POST'])
+@app.route('/', endpoint='check', methods=['POST'])
 @return_errors
 def check():
     req = request.data

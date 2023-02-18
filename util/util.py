@@ -9,8 +9,7 @@ def get_ser_lst() -> list:
     @return: A list of the series the application support.
     """
     from Series import Spoiler_detector
-    print(str(type(Spoiler_detector.Avatar)) == "<class 'module'>")
-    return [i.replace("_", " ") for i in filter(lambda i: str(type(getattr(Spoiler_detector, i))) == "<class 'module'>", Spoiler_detector.__dict__)]
+    return [i.replace("_", " ") for i in filter(lambda i: str(type(getattr(Spoiler_detector, i))) == "<class 'function'>", Spoiler_detector.__dict__)]
 
 
 if __name__ == "__main__":

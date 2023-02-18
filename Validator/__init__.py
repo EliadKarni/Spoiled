@@ -1,3 +1,3 @@
-from restValidators import return_errors
+from .restValidators import return_errors
 
 __all__ = ['return_errors']
