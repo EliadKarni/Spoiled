@@ -11,14 +11,12 @@ CORS(app)
 @app.route('/', endpoint='index', methods=['GET'])
 @return_errors
 def index():
-    print("received series get")
     return get_ser_lst()
 
 
 @app.route('/', endpoint='check', methods=['POST'])
 @return_errors
 def check():
-    print(type(request.get_json()))
     return handle_req(request.get_json())
     req = request.data
     return req
