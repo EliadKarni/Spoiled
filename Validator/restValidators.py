@@ -1,9 +1,9 @@
 
 def return_errors(func):
     """
-
-    @param func:
-    @return:
+    The function is a wrapper which catches a function exception and returns its instead of the function return value.
+    @param func: The running function.
+    @return: If the function runs succeed, it returns its value, else, it returns its exception message.
     """
     def wrap(*args, **kwargs):
         try:

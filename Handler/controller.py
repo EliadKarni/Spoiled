@@ -25,7 +25,6 @@ def check_image(url: str, detectors: list) -> bool:
     @param detectors: A list of callable detectors that check if the received image is its spoiler.
     @return: If one or more of the detectors found the received image as a spoiler.
     """
-    print(type(url))
     img = Image.open(BytesIO(requests.get(url).content))
     # here's executor is a future value alternative for python because python's normal Thread can't return is returned
     # value.
@@ -74,7 +73,6 @@ def handle_req(req: dict) -> list:
     detectors = [getattr(Spoiler_detector, serie.replace(" ", "_")) for serie in req[RestsMacros.SERIES]]
     # checks each image using all the detectors on each.
     res = check_images(req[RestsMacros.IMAGES], detectors)
-    print(res)
     return res
 
 
