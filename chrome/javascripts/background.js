@@ -41,6 +41,28 @@ function fetchList(){
         })
 
 }
+// async function getCurrentTab() {
+//     let queryOptions = { active: true, lastFocusedWindow: true };
+//     let [tab] = await chrome.tabs.query(queryOptions);
+//     return tab;
+// }
+chrome.tabs.onUpdated.addListener((tabId,changeInfo, tab)=>{
+    if (changeInfo.status === 'complete'){
+        chrome.scripting.executeScript({
+            target: { tabId: tabId},
+            files: ['pageImagesBlocker.js'],
+        }).catch((err)=>{
+            console.log(err)
+        })
+    }
+})
+// chrome.scripting.executeScript({
+//             target: { tabId: await getCurrentTab().id},
+//             files: ['pageImagesBlocker.js'],
+//         }).catch((err)=>{
+//         console.log(err)
+// });
+
 
 // chrome.webRequest.onBeforeRequest.addListener((details)=>{
 //

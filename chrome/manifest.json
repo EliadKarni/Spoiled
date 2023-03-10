@@ -10,14 +10,6 @@
     "default_title": "Spoiled"
   },
   "host_permissions": ["<all_urls>"],
-  "permissions": [
-    "tabs",
-    "storage",
-    "nativeMessaging",
-    "windows",
-    "alarms",
-    "webRequest"
-  ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -26,5 +18,15 @@
   ],
   "background": {
     "service_worker": "./javascripts/background.js"
-  }
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage",
+    "nativeMessaging",
+    "windows",
+    "alarms",
+    "scripting"
+  ]
 }
