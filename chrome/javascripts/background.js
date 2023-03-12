@@ -3,6 +3,7 @@ const AZURE_URL = "http://127.0.0.1:16201"
 //const SERIES_PATH = "series"
 const ALARM_NAME = "fetchListAlarm"
 const INSTALL_REASON = "install"
+const SERIES_LIST = "seriesList"
 
 /**
  * Checks if the chrome extension currently installs
